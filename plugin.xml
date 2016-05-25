@@ -15,12 +15,19 @@
 	<param name="android-package" value="eu.lp1.cordova.launcher" />
       </feature>
     </config-file>
-    <config-file target="AndroidManifest.xml" parent="/manifest/application">
-	<intent-filter>
-	  <action android:name="android.intent.action.MAIN" />
-	  <category android:name="android.intent.category.DEFAULT" />
-	  <category android:name="android.intent.category.HOME" />
-	</intent-filter>
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <application
+	  android:launchMode="singleTask"
+	  android:clearTaskOnLaunch="true"
+	  android:stateNotNeeded="true">
+      </application>
     </config-file>
-  </platform>
+    <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
+      <intent-filter>
+	<action android:name="android.intent.action.MAIN" />
+	<category android:name="android.intent.category.HOME" />
+	<category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </config-file>
+</platform>
 </plugin>
