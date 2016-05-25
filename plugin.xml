@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"
+	id="cordova-plugin-launcher" version="0.1">
+  <name>Cordova Launcher Plugin</name>
+  <author>Jeremie Amsellem</author>
+  <description>
+  </description>
+  <keywords>cordova, launcher</keywords>
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="launcher">
+	<param name="android-package" value="eu.lp1.cordova.launcher" />
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+	<intent-filter>
+	  <action android:name="android.intent.action.MAIN" />
+	  <category android:name="android.intent.category.DEFAULT" />
+	  <category android:name="android.intent.category.HOME" />
+	</intent-filter>
+    </config-file>
+  </platform>
+</plugin>
