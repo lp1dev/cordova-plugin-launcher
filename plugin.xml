@@ -15,7 +15,7 @@
 	<param name="android-package" value="eu.lp1.cordova.launcher" />
       </feature>
     </config-file>
-    <config-file target="AndroidManifest.xml" parent="/manifest">
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
       <application
 	  android:launchMode="singleTask"
 	  android:clearTaskOnLaunch="true"
